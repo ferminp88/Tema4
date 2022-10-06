@@ -8,15 +8,20 @@ public class SmartPhone extends SmartDevice {
     }
     public SmartPhone(String deviceName, String deviceModel, int deviceSerialNumber, double deviceFirmwareVersion ) {
         super(deviceName, deviceModel, deviceSerialNumber, deviceFirmwareVersion);
+        this.numPhone = numPhone;
+        this.memory = memory;
+
     }
-    public void setNumPhone(int numPhone) {
-        this.numPhone = numPhone;}
-    public int  getNumPhone() {
-        return this.numPhone;}
 
-    public void setMemory(int memory) {
-        this.memory = memory;}
-    public int  getMemory () {
-        return this.memory;}
-
+    @Override
+    public String toString() {
+        return "SmartPhone{" +
+                "numPhone=" + numPhone +
+                ", memory=" + memory +
+                ", deviceName='" + deviceName + '\'' +
+                ", deviceModel='" + deviceModel + '\'' +
+                ", deviceSerialNumber=" + deviceSerialNumber +
+                ", deviceFirmwareVersion=" + deviceFirmwareVersion +
+                '}';
+    }
 }
